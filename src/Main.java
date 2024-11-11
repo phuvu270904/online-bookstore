@@ -19,11 +19,11 @@ public class Main {
         Book book6 = new Book("006", "Moby Dick", "Herman Melville", 1, 9.99);
 
         // Create different lists of books for each order
-        List<Book> bookList1 = Arrays.asList(book1, book2);
+        List<Book> bookList1 = Arrays.asList(book2, book1);
         List<Book> bookList2 = Arrays.asList(book3, book4);
-        List<Book> bookList3 = Arrays.asList(book5, book6);
-        List<Book> bookList4 = Arrays.asList(book1, book3, book5);
-        List<Book> bookList5 = Arrays.asList(book2, book4, book6);
+        List<Book> bookList3 = Arrays.asList(book6, book5);
+        List<Book> bookList4 = Arrays.asList(book5, book1, book3);
+        List<Book> bookList5 = Arrays.asList(book6, book2, book4);
 
         // Create orders with different book lists
         Order order1 = new Order("001", "Alice", "123 Maple St", bookList1);
@@ -74,7 +74,7 @@ public class Main {
 
         // Search for an order by customer name
         Scanner scannerSearch = new Scanner(System.in);
-        System.out.print("\nEnter the order ID or customer name to search for an order: ");
+        System.out.print("\nEnter the order ID to search for an order: ");
         String searchQuery = scannerSearch.nextLine();
 
         System.out.println("\nSearching for order:");
